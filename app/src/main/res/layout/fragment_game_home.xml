@@ -12,26 +12,37 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:src="@drawable/space"
-            app:srcCompat="@drawable/space" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/space3" />
 
         <TextView
             android:id="@+id/myImageViewText"
-            android:layout_width="wrap_content"
-            android:layout_height="650dp"
+            android:layout_width="410dp"
+            android:layout_height="339dp"
             android:layout_alignLeft="@id/imageView2"
             android:layout_alignTop="@id/imageView2"
             android:layout_alignRight="@id/imageView2"
             android:layout_alignBottom="@id/imageView2"
 
             android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
+            android:layout_marginLeft="0dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="1dp"
             android:layout_marginRight="1dp"
-            android:layout_marginBottom="66dp"
+            android:layout_marginBottom="391dp"
             android:gravity="center"
             android:text="Space Math Game"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
@@ -51,8 +62,8 @@
             android:layout_marginTop="119dp"
             android:layout_marginEnd="1dp"
             android:layout_marginRight="1dp"
-            android:layout_marginBottom="111dp"
-            android:background="@android:color/white"
+            android:layout_marginBottom="156dp"
+            android:background="@android:drawable/btn_default"
             android:text="Start Game"
             android:textSize="16sp" />
 

@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//TODO: create similar game activity for each level of questions. create wrong page. create next level page
+//TODO: make activity pretty, also possibly add level number, vary background for each level, add question #/ total questions
 
 public class GameActivity extends AppCompatActivity {
 
@@ -62,6 +62,8 @@ public class GameActivity extends AppCompatActivity {
 
 
                 }else {
+                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
+                    startActivity(i);
                     //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(GameActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
@@ -93,6 +95,8 @@ public class GameActivity extends AppCompatActivity {
 
 
                 }else {
+                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
+                    startActivity(i);
                     //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(GameActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
@@ -124,6 +128,8 @@ public class GameActivity extends AppCompatActivity {
                     }
 
                 }else {
+                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
+                    startActivity(i);
                     //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(GameActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();

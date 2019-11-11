@@ -10,6 +10,8 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TODO: create other fragment for learning activity and related files
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//        Intent i = new Intent(getApplicationContext(),GameActivity.class);
-//        startActivity(i);
     }
 
     private void swapFragment(Fragment fragment) {
