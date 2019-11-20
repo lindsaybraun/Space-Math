@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
                     return true;
                 } else if (menuItem.getItemId() == R.id.nav_funFact) {
+                    Fragment fragment = new FunFactHomeFragment();
+                    swapFragment(fragment);
 
 
                     return true;
