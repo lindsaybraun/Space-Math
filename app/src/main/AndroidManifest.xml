@@ -12,13 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TopicDetailActivity"></activity>
-        <activity android:name=".TestYoutube" />
-        <activity android:name=".LearnDetailActivity" />
         <activity android:name=".IncorrectAnswerActivity" />
         <activity android:name=".LevelTwoCompleteActivity" />
         <activity android:name=".LevelTwoActivity" />
         <activity android:name=".LevelOneCompleteActivity" />
+        <activity android:name=".TopicDetailActivity"></activity>
+        <activity android:name=".TestYoutube" />
+        <activity android:name=".LearnDetailActivity" />
         <activity android:name=".GameActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
