@@ -10,6 +10,7 @@ import android.widget.Button;
 public class LevelTwoCompleteActivity extends AppCompatActivity {
 
     private Button continueButton;
+    private Button quitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,7 @@ public class LevelTwoCompleteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_level_two_complete);
 
         continueButton = (Button) findViewById(R.id.continueButton);
+        quitButton = findViewById(R.id.quitButton);
 
         //Start of Button Listener for Button1
         continueButton.setOnClickListener(new View.OnClickListener(){
@@ -24,7 +26,20 @@ public class LevelTwoCompleteActivity extends AppCompatActivity {
             public void onClick(View view){
                 //My logic for Button goes in here
 
-                Intent i = new Intent(getApplicationContext(),LevelTwoActivity.class);
+                Intent i = new Intent(getApplicationContext(),LevelThreeActivity.class);
+                startActivity(i);
+
+
+
+            }
+        });
+
+        quitButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //My logic for Button goes in here
+
+                Intent i = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
             }
         });

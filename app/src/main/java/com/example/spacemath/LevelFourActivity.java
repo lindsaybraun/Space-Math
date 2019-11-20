@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class LevelTwoActivity extends AppCompatActivity {
+public class LevelFourActivity extends AppCompatActivity {
+
     private QuestionLibrary questionLibrary = new QuestionLibrary();
 
     private TextView questionNumView;
@@ -25,7 +26,7 @@ public class LevelTwoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_two);
+        setContentView(R.layout.activity_level_four);
 
         questionNumView = (TextView)findViewById(R.id.question_num_text);
         questionView = (TextView)findViewById(R.id.question);
@@ -44,7 +45,7 @@ public class LevelTwoActivity extends AppCompatActivity {
                 if (buttonChoice1.getText() == answer){
                     //if reached end of level- 4 being total num of questions per level
                     if (questionNum == 3){
-                        Intent i = new Intent(getApplicationContext(),LevelTwoCompleteActivity.class);
+                        Intent i = new Intent(getApplicationContext(),LevelThreeCompleteActivity.class);
                         startActivity(i);
                     }
                     else{
@@ -52,12 +53,12 @@ public class LevelTwoActivity extends AppCompatActivity {
                         updateQuestionNum();
                         updateQuestion();
                         //This line of code is optional
-                        Toast.makeText(LevelTwoActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LevelFourActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
 
                 }else {
-                    Toast.makeText(LevelTwoActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LevelFourActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
                 }
             }
@@ -73,7 +74,7 @@ public class LevelTwoActivity extends AppCompatActivity {
 
                 if (buttonChoice2.getText() == answer){
                     if (questionNum == 3){
-                        Intent i = new Intent(getApplicationContext(),LevelTwoCompleteActivity.class);
+                        Intent i = new Intent(getApplicationContext(),LevelFourCompleteActivity.class);
                         startActivity(i);
                     }
                     else{
@@ -81,14 +82,12 @@ public class LevelTwoActivity extends AppCompatActivity {
                         updateQuestionNum();
                         updateQuestion();
                         //This line of code is optional
-                        Toast.makeText(LevelTwoActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LevelFourActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
                 }else {
-                    Toast.makeText(LevelTwoActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LevelFourActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
-                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
-                    startActivity(i);
                 }
             }
         });
@@ -104,7 +103,7 @@ public class LevelTwoActivity extends AppCompatActivity {
 
                 if (buttonChoice3.getText() == answer){
                     if (questionNum == 3){
-                        Intent i = new Intent(getApplicationContext(),LevelTwoCompleteActivity.class);
+                        Intent i = new Intent(getApplicationContext(),LevelThreeCompleteActivity.class);
                         startActivity(i);
                     }
                     else{
@@ -112,17 +111,19 @@ public class LevelTwoActivity extends AppCompatActivity {
                         updateQuestionNum();
                         updateQuestion();
                         //This line of code is optional
-                        Toast.makeText(LevelTwoActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LevelFourActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
                 }else {
-                    Toast.makeText(LevelTwoActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LevelFourActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
+                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
+                    startActivity(i);
                 }
             }
         });
 
-        //End of Button Listener for Button3
+
 
 
 
@@ -131,17 +132,16 @@ public class LevelTwoActivity extends AppCompatActivity {
     }
 
     private void updateQuestion(){
-        questionView.setText(questionLibrary.getSubtractionQuestion(questionNum));
-        buttonChoice1.setText(questionLibrary.getSubtractionChoice1(questionNum));
-        buttonChoice2.setText(questionLibrary.getSubtractionChoice2(questionNum));
-        buttonChoice3.setText(questionLibrary.getSubtractionChoice3(questionNum));
+        questionView.setText(questionLibrary.getDivisionQuestions(questionNum));
+        buttonChoice1.setText(questionLibrary.getDivisionChoice1(questionNum));
+        buttonChoice2.setText(questionLibrary.getDivisionChoice2(questionNum));
+        buttonChoice3.setText(questionLibrary.getDivisionChoice3(questionNum));
 
-        answer = questionLibrary.getSubtractionCorrectAnswer(questionNum);
+        answer = questionLibrary.getDivisionCorrectAnswer(questionNum);
     }
 
 
     private void updateQuestionNum() {
         questionNumView.setText("" + String.valueOf(questionNum + 1));
     }
-
 }

@@ -6,9 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class LevelOneCompleteActivity extends AppCompatActivity {
+public class LevelFourCompleteActivity extends AppCompatActivity {
 
     private Button continueButton;
     private Button quitButton;
@@ -16,7 +15,7 @@ public class LevelOneCompleteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level_one_complete);
+        setContentView(R.layout.activity_level_four_complete);
 
         continueButton = (Button) findViewById(R.id.continueButton);
         quitButton = findViewById(R.id.quitButton);
@@ -27,12 +26,12 @@ public class LevelOneCompleteActivity extends AppCompatActivity {
             public void onClick(View view){
                 //My logic for Button goes in here
 
-                Intent i = new Intent(getApplicationContext(),LevelTwoActivity.class);
+                Intent i = new Intent(getApplicationContext(),LevelFourActivity.class);
                 startActivity(i);
             }
         });
 
-            quitButton.setOnClickListener(new View.OnClickListener(){
+        quitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 //My logic for Button goes in here
@@ -41,7 +40,6 @@ public class LevelOneCompleteActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
 
     }
 }
