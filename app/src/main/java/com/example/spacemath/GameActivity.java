@@ -13,8 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Random;
 
-//TODO: make activity pretty, also possibly add level number, vary background for each level, add question #/ total questions
-
+//level one of game
 public class GameActivity extends AppCompatActivity {
 
     private QuestionLibrary questionLibrary = new QuestionLibrary();
@@ -29,7 +28,6 @@ public class GameActivity extends AppCompatActivity {
 
     private String answer;
     private int questionNum = 0;
-    //private int mQuestionNumber = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,38 +41,35 @@ public class GameActivity extends AppCompatActivity {
         buttonChoice3 = (Button)findViewById(R.id.choice3);
         quitButton = (Button) findViewById(R.id.quit);
 
+        //create arraylist of 3 unique random question numbers from range of questions
         randomQuestions = getRandomNonRepeatingIntegers(3,0,8);
 
+        //display initial question
         updateQuestion();
 
         //Start of Button Listener for Button1
         buttonChoice1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-                Log.d("!!", String.valueOf(questionNum));
-
+                // if correct answer chosen
                 if (buttonChoice1.getText() == answer){
-                    //if reached end of level- 4 being total num of questions per level
+                    //if reached end of level continue to completion page
                     if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelOneCompleteActivity.class);
                         startActivity(i);
                     }
+                    //go to next question
                     else{
                         questionNum = questionNum + 1;
                         updateQuestionNum();
                         updateQuestion();
-                        //This line of code is optional
                         Toast.makeText(GameActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
-
+                //if incorrect answer go to incorrect answer page
                 }else {
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
-                    //maybe: either have a certain number of lives or exit game when wrong
-                    Toast.makeText(GameActivity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    //updateQuestion();
                 }
             }
         });
@@ -85,29 +80,25 @@ public class GameActivity extends AppCompatActivity {
         buttonChoice2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-                Log.d("!!", String.valueOf(questionNum));
-
+                // if correct answer chosen
                 if (buttonChoice2.getText() == answer){
+                    //if reached end of level continue to completion page
                     if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelOneCompleteActivity.class);
                         startActivity(i);
                     }
+                    //go to next question
                     else{
                         questionNum = questionNum + 1;
                         updateQuestionNum();
                         updateQuestion();
-                        //This line of code is optional
                         Toast.makeText(GameActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
-
+                    //if incorrect answer go to incorrect answer page
                 }else {
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
-                    //maybe: either have a certain number of lives or exit game when wrong
-                    Toast.makeText(GameActivity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    //updateQuestion();
                 }
             }
         });
@@ -119,34 +110,32 @@ public class GameActivity extends AppCompatActivity {
         buttonChoice3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-                Log.d("!!", String.valueOf(questionNum));
+                // if correct answer chosen
                 if (buttonChoice3.getText() == answer){
+                    //if reached end of level continue to completion page
                     if (questionNum == 2){
-                        Log.d("!!", "success");
                         Intent i = new Intent(getApplicationContext(),LevelOneCompleteActivity.class);
                         startActivity(i);
                     }
+                    //go to next question
                     else{
                         questionNum = questionNum + 1;
                         updateQuestionNum();
                         updateQuestion();
-                        //This line of code is optional
                         Toast.makeText(GameActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
+                    //if incorrect answer go to incorrect answer page
                 }else {
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
-                    //maybe: either have a certain number of lives or exit game when wrong
-                    Toast.makeText(GameActivity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    //updateQuestion();
                 }
             }
         });
 
         //End of Button Listener for Button3
 
+        // if quit button clicked return to learn page
         quitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -156,13 +145,9 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
     }
 
+    //update to next randomly chosen question
     private void updateQuestion(){
         questionView.setText(questionLibrary.getQuestion(randomQuestions.get(questionNum)));
         buttonChoice1.setText(questionLibrary.getChoice1(randomQuestions.get(questionNum)));
@@ -172,11 +157,12 @@ public class GameActivity extends AppCompatActivity {
         answer = questionLibrary.getCorrectAnswer(randomQuestions.get(questionNum));
     }
 
-
+    //update question number displayed
     private void updateQuestionNum() {
         questionNumView.setText("" + String.valueOf(questionNum + 1));
     }
 
+    //generate random number in a range
     private static int getRandomNumberInRange(int min, int max) {
 
         if (min >= max) {
@@ -187,6 +173,7 @@ public class GameActivity extends AppCompatActivity {
         return r.nextInt((max - min) + 1) + min;
     }
 
+    // generate unique random numbers in a range of a certain size
     public static ArrayList<Integer> getRandomNonRepeatingIntegers(int size, int min,
                                                                    int max) {
         ArrayList<Integer> numbers = new ArrayList<Integer>();

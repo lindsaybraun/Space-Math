@@ -2,6 +2,7 @@ package com.example.spacemath;
 
 import java.io.Serializable;
 
+//topic item for lessons
 public class Topic implements Serializable {
 
     private int topicId;

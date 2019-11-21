@@ -1,6 +1,8 @@
 package com.example.spacemath;
 
+//section of nasa images api response with all the data
 public class Item {
+    //need links for image url and data for image title
     Links[] links;
     Data[] data;
 

@@ -12,6 +12,8 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
+//activity to view youtube tutorial video using youtube player api
+//youtube api jar file required for usage
 public class YoutubeActivity extends YouTubeBaseActivity {
 
     private Button play;
@@ -39,6 +41,8 @@ public class YoutubeActivity extends YouTubeBaseActivity {
 
             }
         };
+
+        // start video when play button pressed
         play = findViewById(R.id.playButton);
         play.setOnClickListener(new View.OnClickListener() {
             @Override

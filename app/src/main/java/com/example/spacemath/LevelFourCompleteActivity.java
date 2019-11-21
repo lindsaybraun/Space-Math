@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+//page when final level is complete
 public class LevelFourCompleteActivity extends AppCompatActivity {
 
     private Button continueButton;
@@ -26,8 +27,7 @@ public class LevelFourCompleteActivity extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
+                //go to question one level 1 to restart
                 Intent i = new Intent(getApplicationContext(),GameActivity.class);
 
                 startActivity(i);
@@ -37,8 +37,7 @@ public class LevelFourCompleteActivity extends AppCompatActivity {
         quitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
+                // return to learn page
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
 
                 startActivity(i);

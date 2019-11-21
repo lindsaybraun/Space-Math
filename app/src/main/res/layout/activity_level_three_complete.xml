@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#004A67"
     tools:context=".LevelThreeCompleteActivity">
 
     <Button
@@ -37,7 +38,7 @@
         android:layout_height="158dp"
         android:gravity="center"
         android:text="Congratulations! Your astronaut pet is ready to join you!"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
