@@ -37,10 +37,10 @@ public class LearnHomeFragment extends Fragment {
 
 
         ArrayList<LearnItem> lessons = new ArrayList<>();
-        //lessons.add(new LearnItem("Addition", R.drawable.addition, "bridging 10's", R.drawable.bridge, "Combos 10&20",R.drawable.combos, "Split", R.drawable.split,"Adding Written Algorithm", R.drawable.addwa));
-        //lessons.add(new LearnItem("Subtraction", R.drawable.subtraction, "count down", "Ten Frames", "Pull apart", "Subtraction Written Algorithm"));
-        //lessons.add(new LearnItem("Multiplication", R.drawable.multiplication, "Repeated Addition", "skip counting","Equal Groups","Multiplication Written Algorithm"));
-        //lessons.add(new LearnItem("Division", R.drawable.division,"Fact Families", "Skip Counting", "Remainder concepts", "Division Written Algorithm"));
+        lessons.add(new LearnItem("Addition", R.drawable.addition, "bridging 10's", R.drawable.bridge, "Combos 10&20",R.drawable.combos, "Split", R.drawable.split,"Adding Written Algorithm", R.drawable.addwa));
+        lessons.add(new LearnItem("Subtraction", R.drawable.subtraction, "count down", "Ten Frames", "Pull apart", "Subtraction Written Algorithm"));
+        lessons.add(new LearnItem("Multiplication", R.drawable.multiplication, "Repeated Addition", "skip counting","Equal Groups","Multiplication Written Algorithm"));
+        lessons.add(new LearnItem("Division", R.drawable.division,"Fact Families", "Skip Counting", "Remainder concepts", "Division Written Algorithm"));
 
         recyclerView = view.findViewById(R.id.rv_learn);
         layoutManager = new LinearLayoutManager(view.getContext());
