@@ -17,6 +17,7 @@ public class LevelTwoActivity extends AppCompatActivity {
     private Button buttonChoice1;
     private Button buttonChoice2;
     private Button buttonChoice3;
+    private Button quitButton;
 
     private String answer;
     private int questionNum = 0;
@@ -32,6 +33,7 @@ public class LevelTwoActivity extends AppCompatActivity {
         buttonChoice1 = (Button)findViewById(R.id.choice1);
         buttonChoice2 = (Button)findViewById(R.id.choice2);
         buttonChoice3 = (Button)findViewById(R.id.choice3);
+        quitButton = (Button)findViewById(R.id.quit);
 
         updateQuestion();
 
@@ -57,6 +59,9 @@ public class LevelTwoActivity extends AppCompatActivity {
 
 
                 }else {
+                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
+                    startActivity(i);
+                    //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(LevelTwoActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
                 }
@@ -85,6 +90,9 @@ public class LevelTwoActivity extends AppCompatActivity {
                     }
 
                 }else {
+                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
+                    startActivity(i);
+                    //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(LevelTwoActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
                 }
@@ -114,6 +122,9 @@ public class LevelTwoActivity extends AppCompatActivity {
                     }
 
                 }else {
+                    Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
+                    startActivity(i);
+                    //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(LevelTwoActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
                 }
@@ -121,6 +132,16 @@ public class LevelTwoActivity extends AppCompatActivity {
         });
 
         //End of Button Listener for Button3
+
+        quitButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //My logic for Button goes in here
+
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
 
 
 

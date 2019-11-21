@@ -15,12 +15,15 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-
+        <activity android:name=".LevelFourCompleteActivity"></activity>
+        <activity android:name=".LevelFourActivity" />
+        <activity android:name=".LevelThreeCompleteActivity" />
+        <activity android:name=".LevelThreeActivity" />
         <activity android:name=".IncorrectAnswerActivity" />
         <activity android:name=".LevelTwoCompleteActivity" />
         <activity android:name=".LevelTwoActivity" />
         <activity android:name=".LevelOneCompleteActivity" />
-        <activity android:name=".TopicDetailActivity"></activity>
+        <activity android:name=".TopicDetailActivity" />
         <activity android:name=".TestYoutube" />
         <activity android:name=".LearnDetailActivity" />
         <activity android:name=".GameActivity" />
