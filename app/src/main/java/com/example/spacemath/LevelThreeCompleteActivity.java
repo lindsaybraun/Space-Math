@@ -18,7 +18,7 @@ public class LevelThreeCompleteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_level_three_complete);
 
         continueButton = (Button) findViewById(R.id.continueButton);
-        quitButton = findViewById(R.id.quitButton);
+        quitButton = (Button) findViewById(R.id.quitButton);
 
         //Start of Button Listener for Button1
         continueButton.setOnClickListener(new View.OnClickListener(){
@@ -36,7 +36,7 @@ public class LevelThreeCompleteActivity extends AppCompatActivity {
             public void onClick(View view){
                 //My logic for Button goes in here
 
-                Intent i = new Intent(getApplicationContext(),MainActivity.class);
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
         });

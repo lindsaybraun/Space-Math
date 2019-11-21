@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LevelTwoCompleteActivity">
+    tools:context=".LevelFourCompleteActivity">
 
     <Button
         android:id="@+id/quitButton"
@@ -22,21 +22,21 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="305dp"
-        android:layout_height="438dp"
+        android:layout_width="349dp"
+        android:layout_height="479dp"
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toTopOf="@+id/quitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/destination" />
+        app:srcCompat="@drawable/finalspace" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="158dp"
         android:gravity="center"
-        android:text="Congratulations! Your destination is ready!"
+        android:text="Congratulations! Your rocket has taken off!"
         android:textColor="@android:color/black"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,7 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:background="#4CAF50"
-        android:text="Continue"
+        android:text="Restart"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:layout_marginBottom="5dp"
