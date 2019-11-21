@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 //TODO: make activity pretty, also possibly add level number, vary background for each level, add question #/ total questions
 
 public class GameActivity extends AppCompatActivity {
@@ -22,6 +25,7 @@ public class GameActivity extends AppCompatActivity {
     private Button buttonChoice2;
     private Button buttonChoice3;
     private Button quitButton;
+    private ArrayList<Integer> randomQuestions;
 
     private String answer;
     private int questionNum = 0;
@@ -39,6 +43,8 @@ public class GameActivity extends AppCompatActivity {
         buttonChoice3 = (Button)findViewById(R.id.choice3);
         quitButton = (Button) findViewById(R.id.quit);
 
+        randomQuestions = getRandomNonRepeatingIntegers(3,0,8);
+
         updateQuestion();
 
         //Start of Button Listener for Button1
@@ -50,7 +56,7 @@ public class GameActivity extends AppCompatActivity {
 
                 if (buttonChoice1.getText() == answer){
                     //if reached end of level- 4 being total num of questions per level
-                    if (questionNum == 3){
+                    if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelOneCompleteActivity.class);
                         startActivity(i);
                     }
@@ -83,7 +89,7 @@ public class GameActivity extends AppCompatActivity {
                 Log.d("!!", String.valueOf(questionNum));
 
                 if (buttonChoice2.getText() == answer){
-                    if (questionNum == 3){
+                    if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelOneCompleteActivity.class);
                         startActivity(i);
                     }
@@ -116,7 +122,7 @@ public class GameActivity extends AppCompatActivity {
                 //My logic for Button goes in here
                 Log.d("!!", String.valueOf(questionNum));
                 if (buttonChoice3.getText() == answer){
-                    if (questionNum == 3){
+                    if (questionNum == 2){
                         Log.d("!!", "success");
                         Intent i = new Intent(getApplicationContext(),LevelOneCompleteActivity.class);
                         startActivity(i);
@@ -158,16 +164,41 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private void updateQuestion(){
-        questionView.setText(questionLibrary.getQuestion(questionNum));
-        buttonChoice1.setText(questionLibrary.getChoice1(questionNum));
-        buttonChoice2.setText(questionLibrary.getChoice2(questionNum));
-        buttonChoice3.setText(questionLibrary.getChoice3(questionNum));
+        questionView.setText(questionLibrary.getQuestion(randomQuestions.get(questionNum)));
+        buttonChoice1.setText(questionLibrary.getChoice1(randomQuestions.get(questionNum)));
+        buttonChoice2.setText(questionLibrary.getChoice2(randomQuestions.get(questionNum)));
+        buttonChoice3.setText(questionLibrary.getChoice3(randomQuestions.get(questionNum)));
 
-        answer = questionLibrary.getCorrectAnswer(questionNum);
+        answer = questionLibrary.getCorrectAnswer(randomQuestions.get(questionNum));
     }
 
 
     private void updateQuestionNum() {
         questionNumView.setText("" + String.valueOf(questionNum + 1));
+    }
+
+    private static int getRandomNumberInRange(int min, int max) {
+
+        if (min >= max) {
+            throw new IllegalArgumentException("max must be greater than min");
+        }
+
+        Random r = new Random();
+        return r.nextInt((max - min) + 1) + min;
+    }
+
+    public static ArrayList<Integer> getRandomNonRepeatingIntegers(int size, int min,
+                                                                   int max) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        while (numbers.size() < size) {
+            int random = getRandomNumberInRange(min, max);
+
+            if (!numbers.contains(random)) {
+                numbers.add(random);
+            }
+        }
+
+        return numbers;
     }
 }
