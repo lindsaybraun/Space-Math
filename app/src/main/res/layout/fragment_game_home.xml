@@ -44,7 +44,7 @@
             android:layout_marginRight="1dp"
             android:layout_marginBottom="391dp"
             android:gravity="center"
-            android:text="Space Math Game"
+            android:text="Spaceship Mission"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="@android:color/white"
             android:textSize="40sp"

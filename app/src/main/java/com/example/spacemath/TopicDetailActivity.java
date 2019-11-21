@@ -27,7 +27,6 @@ public class TopicDetailActivity extends YouTubeBaseActivity {
     private YouTubePlayerView youTubePlayerView;
     private YouTubePlayer.OnInitializedListener onInitializedListener;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,35 +41,21 @@ public class TopicDetailActivity extends YouTubeBaseActivity {
         topicSummary = findViewById(R.id.tv_topicSummary);
         topicImage = findViewById(R.id.topicImageDetail);
 
+        //set topic title, image, and info
         topicTitle.setText(currentTopic.getTopicName());
         topicIntro.setText(currentTopic.getTopicIntro());
         topicContent.setText(currentTopic.getTopicContent());
         topicSummary.setText(currentTopic.getTopicSummary());
         topicImage.setImageResource(currentTopic.getTopicImage());
 
-
-
-
-        youTubePlayerView = (YouTubePlayerView)findViewById(R.id.youtubeVid);
-        onInitializedListener = new YouTubePlayer.OnInitializedListener() {
-            @Override
-            public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
-                youTubePlayer.loadVideo(currentTopic.getVideoURL());
-            }
-
-            @Override
-            public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
-
-            }
-        };
         play = findViewById(R.id.playButton);
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                youTubePlayerView.initialize("AIzaSyBEhglmux-UV8N73ohEr-x4ziSFRrAYx38 ",onInitializedListener);
+                //when watch button clicked go to new activity to watch youtube video (youtube api player requires its own activity to play seamlessly)
                 Intent i = new Intent(getApplicationContext(), YoutubeActivity.class);
                 i.putExtra("YoutubeVideo", currentTopic);
-                getApplicationContext().startActivity(i);
+                startActivity(i);
             }
         });
 

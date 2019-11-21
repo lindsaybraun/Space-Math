@@ -31,11 +31,8 @@ import com.google.gson.Gson;
 import java.util.Random;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+// fragment to give fun math fact from numbersapi and display random space image from nasa api
 public class FunFactHomeFragment extends Fragment {
-
 
     private EditText number;
     private Button getFunFact;
@@ -60,7 +57,7 @@ public class FunFactHomeFragment extends Fragment {
         spaceImage = view.findViewById(R.id.spaceImage);
         imageTitle = view.findViewById(R.id.imageTitle);
 
-        //image api
+        //image api request
         String image_url = "https://images-api.nasa.gov/search?media_type=image";
         final RequestQueue request_queue = Volley.newRequestQueue(getActivity());
 
@@ -70,7 +67,6 @@ public class FunFactHomeFragment extends Fragment {
                 Gson gson = new Gson();
                 SpaceImage current_image = gson.fromJson(response, SpaceImage.class);
                 setData(current_image);
-
             }
         };
 
@@ -85,7 +81,7 @@ public class FunFactHomeFragment extends Fragment {
         StringRequest string_request = new StringRequest(Request.Method.GET, image_url, response_listener, error_listener);
         request_queue.add(string_request);
 
-
+        //numbers api request on button click
         getFunFact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,7 +104,6 @@ public class FunFactHomeFragment extends Fragment {
                     }
                 };
 
-
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url, responseListener, errorListener);
                 requestQueue.add(stringRequest);
 
@@ -118,6 +113,7 @@ public class FunFactHomeFragment extends Fragment {
         return view;
     }
 
+    // returns random integer from a range
     private static int getRandomNumberInRange(int min, int max) {
 
         if (min >= max) {
@@ -128,6 +124,7 @@ public class FunFactHomeFragment extends Fragment {
         return r.nextInt((max - min) + 1) + min;
     }
 
+    // sets random image and image title
     public void setData(SpaceImage current_image) {
         Integer num_images = current_image.collection.items.length;
         Integer random_num = getRandomNumberInRange(0,num_images - 1);

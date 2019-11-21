@@ -13,7 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Random;
 
-
+//level 3 of game
 public class LevelThreeActivity extends AppCompatActivity {
 
     private QuestionLibrary questionLibrary = new QuestionLibrary();
@@ -30,7 +30,6 @@ public class LevelThreeActivity extends AppCompatActivity {
 
     private String answer;
     private int questionNum = 0;
-    //private int mQuestionNumber = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,30 +53,25 @@ public class LevelThreeActivity extends AppCompatActivity {
         buttonChoice1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
+                // if correct answer chosen
                 if (buttonChoice1.getText() == answer){
-                    //if reached end of level- 4 being total num of questions per level
-
+                    //if reached end of level continue to completion page
                     if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelThreeCompleteActivity.class);
                         startActivity(i);
                     }
+                    //go to next question
                     else{
                         questionNum = questionNum + 1;
                         updateQuestionNum();
                         updateQuestion();
-                        //This line of code is optional
                         Toast.makeText(LevelThreeActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
-
+                    //if incorrect answer go to incorrect answer page
                 }else {
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
-                    //maybe: either have a certain number of lives or exit game when wrong
-                    Toast.makeText(LevelThreeActivity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    //updateQuestion();
                 }
             }
         });
@@ -88,27 +82,25 @@ public class LevelThreeActivity extends AppCompatActivity {
         buttonChoice2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
+                // if correct answer chosen
                 if (buttonChoice2.getText() == answer){
+                    //if reached end of level continue to completion page
                     if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelThreeCompleteActivity.class);
                         startActivity(i);
                     }
+                    //go to next question
                     else{
                         questionNum = questionNum + 1;
                         updateQuestionNum();
                         updateQuestion();
-                        //This line of code is optional
                         Toast.makeText(LevelThreeActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
+                    //if incorrect answer go to incorrect answer page
                 }else {
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
-                    //maybe: either have a certain number of lives or exit game when wrong
-                    Toast.makeText(LevelThreeActivity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    //updateQuestion();
                 }
             }
         });
@@ -120,26 +112,25 @@ public class LevelThreeActivity extends AppCompatActivity {
         buttonChoice3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
+                // if correct answer chosen
                 if (buttonChoice3.getText() == answer){
+                    //if reached end of level continue to completion page
                     if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelThreeCompleteActivity.class);
                         startActivity(i);
                     }
+                    //go to next question
                     else{
                         questionNum = questionNum + 1;
                         updateQuestionNum();
                         updateQuestion();
-                        //This line of code is optional
                         Toast.makeText(LevelThreeActivity.this, "correct", Toast.LENGTH_SHORT).show();
                     }
 
+                    //if incorrect answer go to incorrect answer page
                 }else {
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
-                    //maybe: either have a certain number of lives or exit game when wrong
-                    Toast.makeText(LevelThreeActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -149,16 +140,10 @@ public class LevelThreeActivity extends AppCompatActivity {
         quitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
         });
-
-
-
-
 
     }
 

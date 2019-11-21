@@ -3,10 +3,12 @@ package com.example.spacemath;
 import java.util.ArrayList;
 import java.util.List;
 
+//library of questions, answer choices, and correct answers for game
 public class QuestionLibrary {
+    //4 levels (addition, subtraction, multiplication, division)
+    //9 question options with 3 answer choices each
 
-
-
+    //addition question options
     private String questions [] = {
             "24 + 17 =",
             "32 + 13 =",
@@ -20,7 +22,7 @@ public class QuestionLibrary {
 
     };
 
-
+    //addition question answer choices
     private String choices [][] = {
             {"31", "48", "41"},
             {"35", "45", "55"},
@@ -34,9 +36,10 @@ public class QuestionLibrary {
     };
 
 
-
+    //addition question correct answers
     private String correctAnswers[] = {"41", "45", "36", "88","7","56","76","64","80"};
 
+    //subtraction question options
     private String subtractionQuestions [] = {
             "24 - 17 =",
             "32 - 13 =",
@@ -50,7 +53,7 @@ public class QuestionLibrary {
 
     };
 
-
+    //subtraction question choices
     private String subtractionChoices [][] = {
             {"7", "5", "9"},
             {"9", "22", "19"},
@@ -65,9 +68,10 @@ public class QuestionLibrary {
     };
 
 
-
+    //subtraction correct answers
     private String subtractionCorrectAnswers[] = {"7","19", "4", "38","52","16","58","29","56"};
 
+    //multiplication questions
     private String multiplicationQuestions [] = {
             "8 x 9 =",
             "10 x 82 =",
@@ -81,7 +85,7 @@ public class QuestionLibrary {
 
     };
 
-
+    //multiplication question answer choices
     private String multiplicationChoices [][] = {
             {"81", "72", "63"},
             {"800", "82", "820"},
@@ -94,10 +98,10 @@ public class QuestionLibrary {
             {"728", "729","730"}
     };
 
-
+    //multiplication correct answers
     private String multiplicationCorrectAnswers[] = {"72","820", "156", "171","384","450","1664","84","729"};
 
-
+    //division questions
     private String divisionQuestions [] = {
             "24 ÷ 12 =",
             "80 ÷ 4 =",
@@ -111,7 +115,7 @@ public class QuestionLibrary {
 
     };
 
-
+    //division question answer choices
     private String divisionChoices [][] = {
             {"4", "2", "6"},
             {"40", "20", "76"},
@@ -126,7 +130,7 @@ public class QuestionLibrary {
     };
 
 
-
+    //division question answer
     private String divisionCorrectAnswers[] = {"2","20", "10 r 2", "9 r 7","60","90","8","43","1406"};
 
 

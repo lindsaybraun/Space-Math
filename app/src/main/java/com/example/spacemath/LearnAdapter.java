@@ -32,10 +32,6 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.ViewHolder> 
 
         public ImageView imageResource;
         public TextView lessonTitle;
-//        public TextView topic1;
-//        public TextView topic2;
-//        public TextView topic3;
-//        public TextView topic4;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -61,26 +57,21 @@ public class LearnAdapter extends RecyclerView.Adapter<LearnAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-
-
+        //set image and lesson title
         final LearnItem currentItem = lessons.get(position);
         holder.imageResource.setImageResource(currentItem.getImageResource());
         holder.lessonTitle.setText(currentItem.getLesson());
-
-
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
-
                 Intent intent = new Intent(context, LearnDetailActivity.class);
                 intent.putExtra("LearnItem", currentItem);
                 context.startActivity(intent);
 
             }
         });
-
 
     }
 

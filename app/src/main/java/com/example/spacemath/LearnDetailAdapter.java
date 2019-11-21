@@ -47,25 +47,22 @@ public class LearnDetailAdapter extends RecyclerView.Adapter<LearnDetailAdapter.
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
 
-
         final Topic currentTopic = topics.get(position);
 
+        //set topic title and image
         holder.topicTitle.setText(currentTopic.getTopicName());
         holder.imageResource.setImageResource(currentTopic.getTopicImage());
-
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
-
                 Intent intent = new Intent(context, TopicDetailActivity.class);
                 intent.putExtra("Topic", currentTopic);
                 context.startActivity(intent);
 
             }
         });
-
 
     }
 

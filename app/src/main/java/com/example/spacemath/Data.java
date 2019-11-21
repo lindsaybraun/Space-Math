@@ -1,5 +1,6 @@
 package com.example.spacemath;
 
+//section of nasa api response with image title
 public class Data {
     String title;
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -8,7 +9,6 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardCornerRadius="4dp"
         android:layout_marginBottom="4dp"
         android:id="@+id/cardView1"
@@ -23,26 +23,33 @@
 
             <ImageView
                 android:id="@+id/topicImage"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
                 android:padding="2dp"
-                app:srcCompat="@drawable/bridge"/>
+                app:srcCompat="@drawable/bridge" />
 
             <TextView
                 android:id="@+id/tv_topic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Topic 1"
-                android:textColor="@color/black"
-                android:textSize="20dp"
-                android:textStyle="italic"
-                android:layout_centerHorizontal="true"
                 android:layout_alignParentTop="true"
-                android:layout_toEndOf="@+id/lessonImage"
-                android:layout_toRightOf="@+id/lessonImage"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"/>
+                android:layout_toEndOf="@+id/topicImage"
+                android:layout_toRightOf="@+id/topicImage"
+                android:text="Topic 1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/black"
+                android:textSize="28dp"
+                android:textStyle="normal"
+                app:fontFamily="sans-serif" />
 
         </RelativeLayout>
 

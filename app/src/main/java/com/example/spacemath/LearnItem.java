@@ -2,6 +2,7 @@ package com.example.spacemath;
 
 import java.io.Serializable;
 
+// item for learn section- includes title and image
 public class LearnItem implements Serializable {
 
     private int imageResource;
@@ -13,9 +14,6 @@ public class LearnItem implements Serializable {
         this.imageResource = imageResource;
 
     }
-
-
-
 
     public int getImageResource() {
         return imageResource;

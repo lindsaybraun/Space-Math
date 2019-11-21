@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+//level 2 completion page
 public class LevelTwoCompleteActivity extends AppCompatActivity {
 
     private Button continueButton;
@@ -24,8 +25,7 @@ public class LevelTwoCompleteActivity extends AppCompatActivity {
         continueButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
+                //continue to level 3 questions
                 Intent i = new Intent(getApplicationContext(),LevelThreeActivity.class);
                 startActivity(i);
             }
@@ -34,8 +34,7 @@ public class LevelTwoCompleteActivity extends AppCompatActivity {
         quitButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
-                //My logic for Button goes in here
-
+                //quit to learning page
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
             }
