@@ -11,8 +11,9 @@ public class Topic implements Serializable {
     private String topicContent;
     private String topicSummary;
     private String videoURL;
+    private int topicImage;
 
-    public Topic(int topicId, String lesson, String topicName, String topicIntro, String topicContent, String topicSummary, String videoURL){
+    public Topic(int topicId, String lesson, String topicName, String topicIntro, String topicContent, String topicSummary, String videoURL, int topicImage){
         this.topicId = topicId;
         this.lesson = lesson;
         this.topicName = topicName;
@@ -20,6 +21,7 @@ public class Topic implements Serializable {
         this.topicContent = topicContent;
         this.topicSummary = topicSummary;
         this.videoURL = videoURL;
+        this.topicImage = topicImage;
     }
 
     public int getTopicId(){
@@ -49,4 +51,6 @@ public class Topic implements Serializable {
     public String getVideoURL() {
         return videoURL;
     }
+
+    public int getTopicImage(){return topicImage;}
 }

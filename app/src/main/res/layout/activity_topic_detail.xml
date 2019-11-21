@@ -14,18 +14,21 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             app:srcCompat= "@drawable/bridge"
-            android:id="@+id/topicImage"/>
+            android:id="@+id/topicImageDetail"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Topic Title"
+            android:textStyle="bold"
             android:id="@+id/tv_topicTitle"
-            android:layout_below="@id/topicImage"
-            android:textSize="20dp"
+            android:layout_below="@id/topicImageDetail"
+            android:textSize="30dp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -33,6 +36,9 @@
             android:layout_below="@id/tv_topicTitle"
             android:textAlignment="center"
             android:id="@+id/tv_topicIntro"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Bridging through 10 is a mental Maths technique of adding two numbers whose total is greater than 10. Pupils count through to 10 then add the remainder as well." />
         <TextView
             android:layout_width="match_parent"
@@ -40,6 +46,8 @@
             android:layout_below="@id/tv_topicIntro"
             android:textAlignment="center"
             android:id="@+id/tv_topicContent"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:text="For instance, when given a sum such as 9 + 7, pupils can use the bridging through ten method as follows:\n"
             android:layout_marginTop="20dp"/>
 
@@ -51,6 +59,8 @@
             android:textAlignment="center"
             android:id="@+id/tv_topicSummary"
             android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:text="There are a number of visual aids you can use with your class, as they learn to use the Bridging through 10 method and strengthen their knowledge of number bonds. "/>
 
         <com.google.android.youtube.player.YouTubePlayerView

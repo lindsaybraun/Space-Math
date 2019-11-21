@@ -39,11 +39,13 @@ public class TopicDetailActivity extends YouTubeBaseActivity {
         topicIntro = findViewById(R.id.tv_topicIntro);
         topicContent = findViewById(R.id.tv_topicContent);
         topicSummary = findViewById(R.id.tv_topicSummary);
+        topicImage = findViewById(R.id.topicImageDetail);
 
         topicTitle.setText(currentTopic.getTopicName());
         topicIntro.setText(currentTopic.getTopicIntro());
         topicContent.setText(currentTopic.getTopicContent());
         topicSummary.setText(currentTopic.getTopicSummary());
+        topicImage.setImageResource(currentTopic.getTopicImage());
 
 
         youTubePlayerView = (YouTubePlayerView)findViewById(R.id.youtubeVid);

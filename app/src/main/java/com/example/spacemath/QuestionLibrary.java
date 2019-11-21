@@ -1,6 +1,12 @@
 package com.example.spacemath;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class QuestionLibrary {
+
+
+
     private String questions [] = {
             "24 + 17 =",
             "32 + 13 =",
@@ -126,9 +132,12 @@ public class QuestionLibrary {
     private String divisionCorrectAnswers[] = {"2","20", "10 r 2", "9 r 7","60","90","8","43","1406"};
 
 
+
+
     public String getQuestion(int a) {
         String question = questions[a];
         return question;
+
     }
 
 
