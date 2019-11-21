@@ -32,7 +32,7 @@ public class FakeDatabase {
                         "10 + 6 is the equivalent of 9 + 7\n" +
                         "Therefore 9 + 7 = 16",
                 "There are a number of visual aids you can use with your class, as they learn to use the Bridging through 10 method and strengthen their knowledge of number bonds. ",
-                    "q9h4skGoWJ8&t=4s",
+                    "9QXu93ZvJC8",
                 R.drawable.bridge));
 
         topics.put(2, new Topic(
@@ -75,7 +75,7 @@ public class FakeDatabase {
                         "\n" +
                         "Rule 3: Regroup, if necessary.",
                 "watch the video and practice!",
-                "PpvFxOIwfbU&t=232s",
+                "mAvuom42NyY",
                 R.drawable.addwa));
 
         topics.put(5, new Topic(5,
