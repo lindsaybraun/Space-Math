@@ -101,6 +101,7 @@ public class LevelTwoActivity extends AppCompatActivity {
                     //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(LevelTwoActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
+
                 }
             }
         });

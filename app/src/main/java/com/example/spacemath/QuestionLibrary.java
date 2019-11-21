@@ -95,7 +95,6 @@ public class QuestionLibrary {
     };
 
 
-
     private String multiplicationCorrectAnswers[] = {"72","820", "156", "171","384","450","1664","84","729"};
 
 
