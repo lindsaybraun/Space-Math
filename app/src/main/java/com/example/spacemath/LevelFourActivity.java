@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -21,6 +20,7 @@ public class LevelFourActivity extends AppCompatActivity {
     private Button buttonChoice1;
     private Button buttonChoice2;
     private Button buttonChoice3;
+
     private Button quitButton;
     private ArrayList<Integer> randomQuestions;
 
@@ -66,9 +66,11 @@ public class LevelFourActivity extends AppCompatActivity {
 
 
                 }else {
+
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
                     //maybe: either have a certain number of lives or exit game when wrong
+
                     Toast.makeText(LevelFourActivity.this, "wrong", Toast.LENGTH_SHORT).show();
                     //updateQuestion();
                 }
@@ -97,6 +99,7 @@ public class LevelFourActivity extends AppCompatActivity {
                     }
 
                 }else {
+
                     Intent i = new Intent(getApplicationContext(),IncorrectAnswerActivity.class);
                     startActivity(i);
                     //maybe: either have a certain number of lives or exit game when wrong
@@ -154,6 +157,7 @@ public class LevelFourActivity extends AppCompatActivity {
 
 
 
+
     }
 
     private void updateQuestion(){
@@ -163,12 +167,14 @@ public class LevelFourActivity extends AppCompatActivity {
         buttonChoice3.setText(questionLibrary.getDivisionChoice3(randomQuestions.get(questionNum)));
 
         answer = questionLibrary.getDivisionCorrectAnswer(randomQuestions.get(questionNum));
+
     }
 
 
     private void updateQuestionNum() {
         questionNumView.setText("" + String.valueOf(questionNum + 1));
     }
+
 
     private static int getRandomNumberInRange(int min, int max) {
 
@@ -194,5 +200,6 @@ public class LevelFourActivity extends AppCompatActivity {
 
         return numbers;
     }
+
 
 }

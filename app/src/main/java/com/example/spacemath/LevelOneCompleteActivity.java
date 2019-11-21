@@ -19,7 +19,9 @@ public class LevelOneCompleteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_level_one_complete);
 
         continueButton = (Button) findViewById(R.id.continueButton);
+
         quitButton = (Button) findViewById(R.id.quitButton);
+
 
         //Start of Button Listener for Button1
         continueButton.setOnClickListener(new View.OnClickListener(){

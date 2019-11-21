@@ -9,8 +9,10 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import java.util.ArrayList;
 import java.util.Random;
+
 
 public class LevelThreeActivity extends AppCompatActivity {
 
@@ -21,8 +23,10 @@ public class LevelThreeActivity extends AppCompatActivity {
     private Button buttonChoice1;
     private Button buttonChoice2;
     private Button buttonChoice3;
+
     private Button quitButton;
     private ArrayList<Integer> randomQuestions;
+
 
     private String answer;
     private int questionNum = 0;
@@ -38,9 +42,11 @@ public class LevelThreeActivity extends AppCompatActivity {
         buttonChoice1 = (Button)findViewById(R.id.choice1);
         buttonChoice2 = (Button)findViewById(R.id.choice2);
         buttonChoice3 = (Button)findViewById(R.id.choice3);
+
         quitButton = (Button)findViewById(R.id.quit);
 
         randomQuestions = getRandomNonRepeatingIntegers(3,0,8);
+
 
         updateQuestion();
 
@@ -52,6 +58,7 @@ public class LevelThreeActivity extends AppCompatActivity {
 
                 if (buttonChoice1.getText() == answer){
                     //if reached end of level- 4 being total num of questions per level
+
                     if (questionNum == 2){
                         Intent i = new Intent(getApplicationContext(),LevelThreeCompleteActivity.class);
                         startActivity(i);
@@ -133,7 +140,6 @@ public class LevelThreeActivity extends AppCompatActivity {
                     startActivity(i);
                     //maybe: either have a certain number of lives or exit game when wrong
                     Toast.makeText(LevelThreeActivity.this, "wrong", Toast.LENGTH_SHORT).show();
-                    //updateQuestion();
                 }
             }
         });

@@ -41,6 +41,5 @@ public class LevelThreeCompleteActivity extends AppCompatActivity {
             }
         });
 
-
     }
 }

@@ -18,14 +18,14 @@ public class LearnDetailAdapter extends RecyclerView.Adapter<LearnDetailAdapter.
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-//        public ImageView imageResource;
+        public ImageView imageResource;
 
         public TextView topicTitle;
 
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-//            imageResource = itemView.findViewById(R.id.topicImage);
+            imageResource = itemView.findViewById(R.id.topicImage);
                 topicTitle = itemView.findViewById(R.id.tv_topic);
 
         }
@@ -49,9 +49,9 @@ public class LearnDetailAdapter extends RecyclerView.Adapter<LearnDetailAdapter.
 
 
         final Topic currentTopic = topics.get(position);
-//        holder.imageResource.setImageResource(currentTopic.getImageResource());
-        holder.topicTitle.setText(currentTopic.getTopicName());
 
+        holder.topicTitle.setText(currentTopic.getTopicName());
+        holder.imageResource.setImageResource(currentTopic.getTopicImage());
 
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

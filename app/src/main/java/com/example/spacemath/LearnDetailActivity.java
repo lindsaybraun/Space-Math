@@ -38,7 +38,7 @@ public class LearnDetailActivity extends AppCompatActivity {
             String topicLesson = FakeDatabase.getAllTopics().get(i).getLesson();
             if (lessonType.equals(topicLesson)){
                 topics.add(FakeDatabase.getAllTopics().get(i));
-                System.out.println(topics.get(i));
+
             }
         }
 
