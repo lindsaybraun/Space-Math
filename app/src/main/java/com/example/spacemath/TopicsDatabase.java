@@ -21,6 +21,7 @@ public class TopicsDatabase {
     public static final HashMap<Integer, Topic> topics = new HashMap<>();
 
     static{
+        //material referenced from https://www.twinkl.com.au/teaching-wiki/bridging-through-10
         topics.put(1, new Topic(
         1,
         "Addition",
@@ -36,6 +37,7 @@ public class TopicsDatabase {
                     "9QXu93ZvJC8",
                 R.drawable.bridge));
 
+        // this material was made by us
         topics.put(2, new Topic(
                 2,
                 "Addition",
@@ -46,6 +48,7 @@ public class TopicsDatabase {
                 "qeJ_M5AK_1k",
                 R.drawable.combos));
 
+        //this material was referenced from http://www.manana.k12.hi.us/~iriss/A1_Site/Math/Entries/2015/8/11_Break_Apart_addition_strategy.html
         topics.put(3,new Topic(3,
                 "Addition",
                 "Split",
@@ -61,6 +64,7 @@ public class TopicsDatabase {
                 "74x-mrD611U",
                 R.drawable.split));
 
+        // this material was referenced from https://study.com/academy/lesson/standard-algorithm-for-addition.html
         topics.put(4, new Topic(4,
                 "Addition",
                 " Adding Algorithm",
@@ -79,6 +83,7 @@ public class TopicsDatabase {
                 "mAvuom42NyY",
                 R.drawable.addwa));
 
+        //this material was referenced from http://www.portmelb.vic.edu.au/wp-content/uploads/Subraction-Strategies.pdf
         topics.put(5, new Topic(5,
                 "Subtraction",
                 "Count Down",
@@ -92,6 +97,7 @@ public class TopicsDatabase {
                 "QhR1SEK49qM",
                 R.drawable.countdown));
 
+        //this material is referenced from https://community.ksde.org/LinkClick.aspx?fileticket=n2ZHaEprrfs%3D&tabid=6036&mid=14879
         topics.put(6, new Topic(6,
                 "Subtraction",
                 "Ten Frames",
@@ -107,6 +113,7 @@ public class TopicsDatabase {
                 "vB09HIcNzC4",
                 R.drawable.tenframes));
 
+        //this material was referenced from https://sciencing.com/break-apart-numbers-subtracting-8761075.html
         topics.put(7,new Topic(7,
                 "Subtraction",
                 "Pull Apart",
@@ -116,6 +123,7 @@ public class TopicsDatabase {
                 "GBHnS4vvobo",
                 R.drawable.subtraction));
 
+        //this material was referenced from https://www.aaamath.com/sub28dx2.htm
         topics.put(8, new Topic(8,
                 "Subtraction",
                 "Subtraction Algorithm",
@@ -138,6 +146,7 @@ public class TopicsDatabase {
                 "Y6M89-6106I",
                 R.drawable.subwa));
 
+        // this material was referenced from https://www.splashmath.com/math-vocabulary/algebra/repeated-addition
         topics.put(9, new Topic(9,
                 "Multiplication",
                 "Repeated Addition",
@@ -154,6 +163,7 @@ public class TopicsDatabase {
                 "dpFOvoiYDaQ",
                 R.drawable.repeatedaddition));
 
+        // this material was referenced from https://study.com/academy/lesson/learning-multiplication-facts-to-10-using-skip-counting.html
         topics.put(10, new Topic(10,
                 "Multiplication",
                 "Skip Counting",
@@ -164,6 +174,7 @@ public class TopicsDatabase {
                 "ybeDUuBhEdM",
                 R.drawable.skipcounting));
 
+        //this material was referenced from https://www.education.com/resources/one-digit-multiplication-and-equal-groups/
         topics.put(11, new Topic(11,
                 "Multiplication",
                 "Equal Groups",
@@ -175,6 +186,7 @@ public class TopicsDatabase {
                 "RNxwasijbAo",
                 R.drawable.equalgroups));
 
+        // this material is referenced from https://www.dummies.com/education/math/pre-algebra/how-to-multiply-multiple-digits/
         topics.put(12, new Topic(12,
                 "Multiplication",
                 "Multiplication Algorithm",
@@ -190,6 +202,7 @@ public class TopicsDatabase {
                 "FJ5qLWP3Fqo",
                 R.drawable.mulwa));
 
+        //this material is referenced from https://www.tutorialspoint.com/multiply_and_divide_whole_numbers/fact_families_for_multiplication_and_division.htm
         topics.put(13, new Topic(13,
                 "Division",
                 " Fact Families",
@@ -203,6 +216,7 @@ public class TopicsDatabase {
                 "-JFcesiUTpw",
                 R.drawable.factfamily));
 
+        //this material is referenced from https://www.helpingwithmath.com/by_subject/counting/skip_counting.html
         topics.put(14, new Topic(14,
                 "Division",
                 "Skip Counting",
@@ -216,6 +230,7 @@ public class TopicsDatabase {
                 "rGMecZ_aERo",
                 R.drawable.skipcounting));
 
+        // this material is referenced from https://study.com/academy/lesson/remainder-in-math-definition-theorem-examples.html
         topics.put(15, new Topic(15,
                 "Division",
                 "Remainder Concept",
@@ -225,6 +240,7 @@ public class TopicsDatabase {
                 "DCAr_Uk04Kw",
                 R.drawable.remaindercon));
 
+        // this material is referenced from https://www.splashmath.com/math-vocabulary/division/long-division
         topics.put(16, new Topic(16,
                 "Division",
                 "Divsion Algorithm",
